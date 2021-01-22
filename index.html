@@ -5,38 +5,48 @@
   </head>
   <body>
     <header>
-      <p><img src="images/coffee.png" alt="" /></p>
+      <p><img src="images/img_logo02.png" alt="" /></p>
       <p class="searchbox">
         <span class="dropdown__choice">
           <img src="images/cupcake.png" />
           <img src="images/down-arrow.png" />
+          <input
+            type="text"
+            class="input__search"
+            placeholder="What are you looking for?"
+          />
         </span>
-        <input
-          type="text"
-          class="input__search"
-          placeholder="What are you looking for?"
-        />
         <button class="btn btn__search">Search</button>
       </p>
 
       <p class="btn__signin"><a href="">Sign In</a></p>
     </header>
+
     <section class="info">
-      <p><img src="images/img_info.png" alt="" /></p>
-      <div class="content">
-        <h1>Business Name</h1>
-        <p>4.5(2)</p>
-        <p>
+      <p class="info__picture"><img src="images/img_info.png" alt="" /></p>
+      <div class="info__inner">
+        <div class="info__overview">
+          <h1>Business Name</h1>
+          <p class="info__rating">
+            <img src="images/star.png" />
+            <span class="info__rating__text"> 4.5(2) </span>
+          </p>
+        </div>
+        <p class="info__details">
           Vel non enim in. Nemo sapiente rerum quasi eaque quia non. Et fugiat
           dolores harum quos voluptas dolorum omnis minus. Provident consequatur
           eveniet labore quia iure ipsa fugit nemo. Modi qui ratione incidunt
           voluptatem eveniet laboriosam ipsum rerum.
         </p>
-        <p>
-          <img src="images/img_avatar.png"> Jane Doe
+        <p class="info__name">
+          <img src="images/img_avatar.png" />
+          <span class="info__name__text"> Jane Doe</span>
         </p>
-        <p><img src="images/placeholder.png"> 1 James Street</p>
-        <p><img src="images/time.png" >Today 10am - 6pm</p>
+        <p class="info__address">
+          <img src="images/placeholder.png" /> 1 James Street
+        </p>
+        <p class="info__time"><img src="images/time.png" />Today 10am - 6pm</p>
+        <p><button class="btn info__btn__message">Message Business</button></p>
       </div>
     </section>
 
@@ -50,49 +60,235 @@
         <li>Category</li>
         <li>Category</li>
       </ul>
-      <p class="btn">
-        <button><a href="./"><img ></a hre></button>
-        <button></button>
-        <button></button>
+      <p class="navigation__btn">
+        <span class="navigation__direction">
+          <a href="./"><img src="images/left-arrow.png" /></a>
+
+          <a href="./"><img src="images/right-arrow.png" /></a>
+        </span>
+        <a href="./"><img src="images/magnifying-glass.png" /></a>
       </p>
     </nav>
 
     <main>
-      <section class="popular">
-        <h2>POPULAR</h2>
+      <section class="main__content">
+        <h2>Popular</h2>
         <ul>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
+          <li class="main__feature">
+            <img src="images/img_popular11.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_popular12.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_popular13.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_popular11.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_popular12.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_popular13.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
         </ul>
       </section>
-      <section class="category">
-        <h2>CATEGORY 1</h2>
+      <section class="main__content">
+        <h2>Category 1</h2>
         <ul>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
+          <li class="main__feature">
+            <img src="images/img_category11.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_category12.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_category13.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_category11.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_category12.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_category13.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
         </ul>
       </section>
-      <section class="category">
-        <h2>CATEGORY 2</h2>
+      <section class="main__content">
+        <h2>Category 2</h2>
         <ul>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
-          <li>z</li>
+          <li class="main__feature">
+            <img src="images/img_category21.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_category22.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_category23.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_category21.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_category22.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
+          <li class="main__feature">
+            <img src="images/img_category23.png" />
+            <div class="main__feature__detail">
+              <h3>Lorem Ipsum Sit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+                sit adipiscing elit.
+              </p>
+            </div>
+            <p class="main__feature__cost">$9.53</p>
+          </li>
         </ul>
       </section>
+
+      <section class="main__review">REVIEW</section>
+
       <section class="others">
-        <h2>YOU MAY ALSO LIKE</h2>
+        <h2>You may also like</h2>
         <ul>
           <li>z</li>
           <li>z</li>
@@ -100,6 +296,6 @@
         </ul>
       </section>
     </main>
-    <footer></footer>
+    <footer>FOOTER</footer>
   </body>
 </html>

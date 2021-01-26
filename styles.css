@@ -5,7 +5,7 @@
 }
 body {
   margin: 10px auto;
-  width: 90%;
+  width: 100%;
   max-width: 1400px;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
@@ -16,12 +16,6 @@ body {
 ul {
   list-style: none;
 }
-ul li {
-  display: inline-block;
-  width: 31%;
-  margin: 15px 0px;
-}
-
 img {
   border-radius: 10px;
   padding-right: 5px;
@@ -50,7 +44,7 @@ h3 {
 
 /* header layout */
 header {
-  padding: 20px 0px;
+  padding: 20px 100px;
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -92,7 +86,7 @@ header .btn__search {
 /* info layout */
 .info {
   display: flex;
-  margin: 20px 0px;
+  padding: 20px 100px;
 }
 .info__inner {
   margin: 10px 0px;
@@ -146,7 +140,8 @@ header .btn__search {
   border: none;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
-  margin: 40px 0px;
+  margin: 40px 100px;
+  margin-bottom: 0px;
   padding: 20px 0px;
 }
 .navigation ul li {
@@ -158,8 +153,9 @@ header .btn__search {
 .navigation__direction {
   padding-right: 30px;
 }
+/* main layout */
 main {
-  margin: 20px 0px;
+  padding: 10px 100px;
 }
 .main__content {
   margin: 40px 0px;
@@ -169,7 +165,10 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+.main__content ul li {
+  width: 31%;
+  margin: 15px 0px;
+}
 .main__feature {
   display: flex;
 }
@@ -184,7 +183,7 @@ main {
   font-weight: bold;
   color: #4f93f3;
 }
-
+/* review part layout */
 .main__review ul {
   display: flex;
   justify-content: space-between;
@@ -211,9 +210,13 @@ main {
 .review__content__date {
   font-size: 12px;
 }
-
-.others li {
-  width: 33.1%;
+/* you may also like part layout*/
+.others {
+  padding-bottom: 100px;
+}
+.others ul {
+  display: flex;
+  justify-content: space-between;
 }
 .others__post__image img {
   width: 95%;
@@ -228,6 +231,39 @@ main {
 .others__rating__text {
   font-weight: normal;
 }
+/* footer layout */
 footer {
-  background-color: lightblue;
+  background-color: #4d8cf1;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 40px 100px;
+}
+
+footer h3 {
+  padding: 10px 0px;
+  color: white;
+  font-size: 18px;
+}
+
+footer li {
+  padding: 5px 0px;
+}
+.footer__contact ul li {
+  display: inline-block;
+}
+.footer__contact img {
+  border-radius: 0%;
+}
+.footer__line {
+  border: none;
+  border-top: 1px solid lightgrey;
+  margin: 0px 100px;
+  padding: 10px 0px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
 }

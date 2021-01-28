@@ -56,7 +56,7 @@ h3 {
 .fa-chevron-right,
 .fa-chevron-left,
 .fa-search {
-  color: black;
+  color: #4a4a4a;
   font-size: 30px;
   padding-left: 25px;
   padding-right: 5px;
@@ -84,9 +84,12 @@ header {
 .header__logo {
   float: left;
   width: 60px;
+  padding-top: 10px;
 }
 .header__btn__signin {
   float: right;
+  height: 50px;
+  line-height: 50px;
 }
 .header__searchbox {
   display: flex;
@@ -103,8 +106,7 @@ header {
   border-radius: 5px;
   height: 30px;
 }
-
-.header__input__search {
+.header__input {
   padding: 12px 0px;
   padding-left: 10px;
   border-radius: 0px 5px 5px 0px;
@@ -115,6 +117,9 @@ header {
   font-size: 15px;
 }
 
+.header__searchbox__SP {
+  display: none;
+}
 .header__btn__search {
   background-color: #4f93f3;
   border: 1px solid #4f93f3;
@@ -140,9 +145,13 @@ header {
 }
 .info__overview {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
+.info__rate {
+  align-self: center;
+}
 .info__rating__text {
   color: #4f93f3;
   font-weight: bold;
@@ -427,6 +436,7 @@ footer li {
 
   /* change components's display */
   .navigation ul .navigation__all {
+    font-weight: bold;
     display: inline;
   }
   .navigation ul .navigation__choice {
@@ -456,6 +466,19 @@ footer li {
     clear: both;
     display: block;
     margin: 20px 0;
+  }
+  .header__input__search {
+    display: none;
+  }
+  .header__input {
+    width: 100%;
+  }
+  .header__searchbox__SP {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  
   }
   .header__dropdown__choice {
     margin: 0;

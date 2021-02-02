@@ -42,6 +42,7 @@ h3 {
   border-radius: 5px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 12px 30px;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
@@ -421,7 +422,8 @@ footer li {
     margin-top: 15px;
   }
   .main__content,
-  .main__review,.others {
+  .main__review,
+  .others {
     margin: 0px;
   }
   .others {
@@ -460,15 +462,17 @@ footer li {
     width: 100%;
   }
 
-  .info__btn__message {
-    padding: 10px 30%;
+  .info__btn__message{
+    width: 100%;
     margin: 20px auto;
   }
   .info__content h1,
   .info__name__text {
     font-size: 22px;
   }
-
+  .main__feature__image img {
+    width: 90px;
+  }
   .main__feature__cost {
     font-size: 14px;
   }

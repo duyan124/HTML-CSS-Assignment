@@ -7,13 +7,18 @@
       integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,11 +39,7 @@
             placeholder="What are you looking for?"
           />
           <span class="header__searchbox__SP">
-            <input
-            type="text"
-            class="header__input"
-            placeholder="Search"
-          />
+            <input type="text" class="header__input" placeholder="Search" />
             <i class="fas fa-search"></i>
           </span>
         </div>
@@ -80,14 +81,14 @@
 
     <nav class="navigation">
       <ul>
-        <li class="navigation__all">All</li>
-        <li class="navigation__choice">Popular</li>
-        <li class="navigation__choice">Category</li>
-        <li class="navigation__choice">Category</li>
-        <li class="navigation__choice">Category</li>
-        <li class="navigation__choice">Category</li>
-        <li class="navigation__choice">Category</li>
-        <li class="navigation__choice">Category</li>
+        <li class="navigation__all"><a href="./">All</a></li>
+        <li class="navigation__choice active"><a href="./">Popular</a></li>
+        <li class="navigation__choice"><a href="./">Category</a></li>
+        <li class="navigation__choice"><a href="./">Category</a></li>
+        <li class="navigation__choice"><a href="./">Category</a></li>
+        <li class="navigation__choice"><a href="./">Category</a></li>
+        <li class="navigation__choice"><a href="./">Category</a></li>
+        <li class="navigation__choice"><a href="./">Category</a></li>
       </ul>
       <div class="navigation__btn">
         <span class="navigation__direction">
@@ -400,7 +401,7 @@
                 <img src="images/img_customer01.png" />
                 <div>
                   <h3>Username</h3>
-                  <p class="review__content__date">Oct. 28,2020</p>
+                  <p class="review__content__date">Oct. 28, 2020</p>
                 </div>
               </div>
               <p>
@@ -424,7 +425,7 @@
                 <img src="images/img_customer01.png" />
                 <div>
                   <h3>Username</h3>
-                  <p class="review__content__date">Oct. 28,2020</p>
+                  <p class="review__content__date">Oct. 28, 2020</p>
                 </div>
               </div>
               <p>
@@ -448,7 +449,7 @@
                 <img src="images/img_customer02.png" />
                 <div>
                   <h3>Username</h3>
-                  <p class="review__content__date">Oct. 28,2020</p>
+                  <p class="review__content__date">Oct. 28, 2020</p>
                 </div>
               </div>
               <p>
@@ -472,7 +473,7 @@
                 <img src="images/img_customer02.png" />
                 <div>
                   <h3>Username</h3>
-                  <p class="review__content__date">Oct. 28,2020</p>
+                  <p class="review__content__date">Oct. 28, 2020</p>
                 </div>
               </div>
               <p>
@@ -585,7 +586,9 @@
           </div>
           <h3>Download On</h3>
           <div class="footer__download">
-            <a href="./"><img src="images/img_download_apple.png" /></a>
+            <a href="./" class="footer__download__apple"
+              ><img src="images/img_download_apple.png"
+            /></a>
             <a href="./"><img src="images/img_download_gg.png" /></a>
           </div>
         </div>

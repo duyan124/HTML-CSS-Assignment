@@ -43,7 +43,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 30px;
+  padding: 11px 40px;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
 }
@@ -75,6 +75,9 @@ h3 {
 .fa-linkedin-in {
   color: white;
 }
+input:focus {
+  border: white;
+}
 /* header layout */
 header {
   margin: 20px 100px;
@@ -102,17 +105,17 @@ header {
   display: flex;
   align-items: center;
   margin: 0px 10px;
-  padding: 8px 0px;
-  padding-left: 10px;
+  padding: 8px 10px;
+  width: 47%;
   border: 1px solid #4f93f3;
   border-radius: 5px;
   height: 30px;
 }
 .header__input {
-  padding: 12px 0px;
+  padding: 13px 0px;
   padding-left: 10px;
   border-radius: 0px 5px 5px 0px;
-  width: 400px;
+  width: 100%;
   border: none;
   border-left: 1px solid grey;
   font-family: "Open Sans", sans-serif;
@@ -144,6 +147,8 @@ header {
 }
 .info__picture img {
   width: 100%;
+  max-width: 740px;
+  height: auto;
 }
 .info__overview {
   display: flex;
@@ -200,7 +205,7 @@ header {
 }
 .navigation ul li {
   display: inline;
-  padding: 0px 20px;
+  padding: 0px 18px;
 }
 .navigation ul li a {
   text-decoration: none;
@@ -219,10 +224,6 @@ header {
   display: none;
   padding-left: 10px;
 }
-
-.navigation__direction {
-  padding-right: 20px;
-}
 .navigation__dropbox {
   display: none;
 }
@@ -232,7 +233,7 @@ main {
   margin-bottom: 100px;
 }
 main h1 {
-  margin: 20px 0px;
+  margin: 30px 0px;
 }
 .main__content {
   margin: 50px 0px;
@@ -316,11 +317,13 @@ main h1 {
 .others ul {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 40px 0px;
   padding-bottom: 80px;
 }
 .others ul li {
   padding: 0px 5px;
+  width: 32%;
 }
 .others ul li:first-child {
   padding-left: 0;
@@ -346,14 +349,18 @@ footer {
   background-color: #4d8cf1;
   font-size: 14px;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 .footer__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0px 100px;
   padding: 40px 0px;
 }
-
+.footer__container__info {
+  width: 25%;
+}
 footer h3 {
   padding: 10px 0px;
   color: white;
@@ -368,7 +375,6 @@ footer li {
 }
 .footer__contact__icon {
   width: 25px;
-
   border-radius: 5px;
   border: 1px solid white;
   text-align: center;
@@ -380,7 +386,7 @@ footer li {
   display: flex;
 }
 .footer__download img {
-  width: 100%;
+  width: 97%;
 }
 .footer__line {
   border: none;
@@ -392,7 +398,50 @@ footer li {
   font-size: 16px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
+  /* change nav bar */
+  .navigation ul .navigation__all {
+    font-weight: bold;
+    display: inline;
+  }
+  .navigation ul .navigation__choice {
+    display: none;
+  }
+
+  .navigation__dropbox {
+    display: inline;
+  }
+  .navigation__search {
+    display: none;
+  }
+  .navigation__direction {
+    display: none;
+  }
+  /*change layout components*/
+  .info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+  .info__content {
+    padding: 0;
+  }
+  .main__content ul li {
+    width: 45%;
+  }
+  .others ul li {
+    width: 45%;
+  }
+  .others ul li:last-child {
+    padding: 20px 0px;
+  }
+  .btn {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
   /* general reset */
   body {
     font-family: "Poppins", sans-serif;
@@ -406,6 +455,53 @@ footer li {
     font-size: 16px;
     font-weight: bold;
   }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header,
+  .info,
+  main,
+  .footer__container {
+    margin: 30px;
+  }
+  .main__content ul li:nth-child(3n-1) {
+    margin: 15px 0;
+  }
+  .main__content ul li:nth-child(odd) {
+    margin-right: 20px;
+  }
+  .navigation {
+    margin: 20px 30px;
+  }
+
+  .info__contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .info__btn__message {
+    margin: 0;
+  }
+  .info__picture {
+    padding-bottom: 30px;
+  }
+  .footer__container__info {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* general reset */
+  /* body {
+    font-family: "Poppins", sans-serif;
+  }
+  h1 {
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+  } */
   /* reset layout */
   header,
   .info,
@@ -435,13 +531,16 @@ footer li {
   }
   .footer__container {
     margin: 0;
-    padding: 0px 10px;
+    padding: 0px 15px;
   }
   .footer__container__info {
     margin: 10px 0px;
   }
   .footer__line {
     margin: 0;
+  }
+  .footer__container__info {
+    width: 100%;
   }
   /* reset components using flex */
   .info,
@@ -461,8 +560,7 @@ footer li {
     padding: 0;
     width: 100%;
   }
-
-  .info__btn__message{
+  .info__btn__message {
     width: 100%;
     margin: 20px auto;
   }
@@ -494,7 +592,7 @@ footer li {
     margin-bottom: 30px;
   }
   /* change nav bar */
-  .navigation ul .navigation__all {
+  /* .navigation ul .navigation__all {
     font-weight: bold;
     display: inline;
   }
@@ -510,9 +608,13 @@ footer li {
   }
   .navigation__direction {
     display: none;
-  }
+  } */
 
   /* reset header */
+  .fa-search {
+    font-size: 20px;
+    padding: 0;
+  }
   .header__line:after {
     clear: both;
     display: block;
@@ -523,16 +625,16 @@ footer li {
   }
   .header__searchbox {
     clear: both;
-    display: block;
+    display: flex;
     margin: 20px 0;
+    width: 100%;
   }
   .header__input__search {
     display: none;
   }
   .header__input {
     font-family: "Poppins", sans-serif;
-    width: 100%;
-    padding-top: 11px;
+    padding-top: 11.5px;
     padding-bottom: 11px;
   }
   .header__searchbox__SP {
@@ -540,35 +642,12 @@ footer li {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0px 5px;
   }
   .header__dropdown__choice {
     margin: 0;
+    width: 100%;
   }
   .header__btn__search {
     display: none;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  header,
-  .info,
-  main,
-  .footer__container {
-    margin: 20px;
-  }
-  .main__content ul li:nth-child(3n-1) {
-    margin: 15px 0;
-  }
-  .main__content ul li:nth-child(odd) {
-    margin-right: 20px;
-  }
-  .header__input {
-    width: 200px;
-  }
-  .navigation {
-    margin: 20px 20px;
-  }
-  .main__content ul li {
-    width: calc(100% * (1 / 2) - 30px - 1px);
   }
 }

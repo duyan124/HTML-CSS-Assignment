@@ -322,7 +322,6 @@ main h1 {
   padding-bottom: 80px;
 }
 .others ul li {
-  padding: 0px 5px;
   width: 32%;
 }
 .others ul li:first-child {
@@ -333,6 +332,7 @@ main h1 {
 }
 .others__post__image img {
   width: 100%;
+  max-width: 447px;
 }
 
 .others__post__title {
@@ -398,7 +398,18 @@ footer li {
   font-size: 16px;
 }
 
+/* responsive tablet */
 @media only screen and (max-width: 1024px) {
+  /*change info layout */
+  .info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+  .info__content {
+    padding: 0;
+  }
   /* change nav bar */
   .navigation ul .navigation__all {
     font-weight: bold;
@@ -417,30 +428,69 @@ footer li {
   .navigation__direction {
     display: none;
   }
-  /*change layout components*/
-  .info {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-  }
-  .info__content {
-    padding: 0;
-  }
-  .main__content ul li {
+  /* display 2 items in a line */
+  .main__content ul li,
+  .others ul li,
+  .footer__container__info {
     width: 45%;
   }
-  .others ul li {
-    width: 45%;
+
+  /* change footer's layout */
+  .footer__container__info {
+    margin: 10px 0px;
   }
-  .others ul li:last-child {
-    padding: 20px 0px;
+  .footer__line {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* general layout */
+  header,
+  .info,
+  main,
+  .footer__container {
+    margin: 30px;
   }
   .btn {
     padding-left: 20px;
     padding-right: 20px;
   }
+  /* change info's components */
+  .info__contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .info__btn__message {
+    margin: 0;
+  }
+  .info__picture {
+    padding-bottom: 30px;
+  }
+  /* change main's components */
+  .main__content ul li:nth-child(3n-1) {
+    margin: 10px 0;
+  }
+  .main__content ul li:nth-child(odd) {
+    margin-right: 30px;
+  }
+  /* change navbar's components */
+  .navigation {
+    margin: 20px 30px;
+  }
+  /* change others's components */
+  .others ul li {
+    padding-top: 20px;
+  }
+
+  .footer__container {
+    padding: 0;
+    padding-top: 20px;
+  }
 }
+
+/* responsive mobile devices - landscape */
 @media only screen and (max-width: 767px) {
   /* general reset */
   body {
@@ -456,38 +506,7 @@ footer li {
     font-weight: bold;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  header,
-  .info,
-  main,
-  .footer__container {
-    margin: 30px;
-  }
-  .main__content ul li:nth-child(3n-1) {
-    margin: 15px 0;
-  }
-  .main__content ul li:nth-child(odd) {
-    margin-right: 20px;
-  }
-  .navigation {
-    margin: 20px 30px;
-  }
 
-  .info__contact {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .info__btn__message {
-    margin: 0;
-  }
-  .info__picture {
-    padding-bottom: 30px;
-  }
-  .footer__container__info {
-    width: 50%;
-  }
-}
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   /* general reset */
   /* body {
@@ -502,95 +521,6 @@ footer li {
     font-size: 16px;
     font-weight: bold;
   } */
-  /* reset layout */
-  header,
-  .info,
-  main {
-    margin: 0px 15px;
-  }
-
-  .navigation {
-    margin: 30px 15px;
-  }
-  /* reset components's layout */
-  main h1 {
-    margin: 15px 0px 10px;
-    margin-top: 15px;
-  }
-  .main__content,
-  .main__review,
-  .others {
-    margin: 0px;
-  }
-  .others {
-    margin-top: 30px;
-  }
-  .main__review ul li,
-  .others ul li {
-    margin: 10px 0px;
-  }
-  .footer__container {
-    margin: 0;
-    padding: 0px 15px;
-  }
-  .footer__container__info {
-    margin: 10px 0px;
-  }
-  .footer__line {
-    margin: 0;
-  }
-  .footer__container__info {
-    width: 100%;
-  }
-  /* reset components using flex */
-  .info,
-  .main__content ul,
-  .main__feature__title,
-  .main__review ul,
-  .others ul,
-  .footer__container {
-    flex-direction: column;
-  }
-
-  /* reset components's width to fit the width's device */
-  .info__content,
-  .main__content ul li,
-  .main__review ul li,
-  .others ul li {
-    padding: 0;
-    width: 100%;
-  }
-  .info__btn__message {
-    width: 100%;
-    margin: 20px auto;
-  }
-  .info__content h1,
-  .info__name__text {
-    font-size: 22px;
-  }
-  .main__feature__image img {
-    width: 90px;
-  }
-  .main__feature__cost {
-    font-size: 14px;
-  }
-  .main__feature__detail {
-    width: 100%;
-    font-size: 12px;
-  }
-  .main__content ul li,
-  .main__content ul li:nth-child(3n-1) {
-    margin: 15px 0px;
-  }
-  .others h1 {
-    font-size: 22px;
-  }
-  .others ul {
-    margin-top: 0px;
-  }
-  .others ul li {
-    margin-bottom: 30px;
-  }
   /* change nav bar */
   /* .navigation ul .navigation__all {
     font-weight: bold;
@@ -609,6 +539,60 @@ footer li {
   .navigation__direction {
     display: none;
   } */
+
+  /* reset layout */
+  header,
+  .info,
+  main,
+  .footer__container {
+    margin: 0px 15px;
+  }
+
+  .navigation {
+    margin: 30px 15px;
+  }
+  /* reset components's layout - adjust margin */
+  main h1 {
+    margin: 15px 0px 10px;
+  }
+  .main__content ul li,
+  .main__content ul li:nth-child(3n-1) {
+    margin: 10px 0px;
+  }
+
+  .main__content,
+  .main__review,
+  .others {
+    margin: 0px;
+  }
+
+  .main__review ul li,
+  .others ul li {
+    margin: 10px 0px;
+  }
+
+  .others {
+    margin-top: 30px;
+  }
+
+  /* reset components using flex */
+  .main__content ul,
+  .main__feature__title,
+  .main__review ul,
+  .others ul,
+  .footer__container {
+    flex-direction: column;
+  }
+
+  /* reset components's width to fit the width's device */
+  .info__content,
+  .main__content ul li,
+  .main__review ul li,
+  .others ul li,
+  .footer__container__info {
+    padding: 0;
+    width: 100%;
+  }
 
   /* reset header */
   .fa-search {
@@ -649,5 +633,35 @@ footer li {
   }
   .header__btn__search {
     display: none;
+  }
+  /* change info's components */
+  .info__btn__message {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .info__content h1,
+  .info__name__text {
+    font-size: 22px;
+  }
+  /* change main__content's components */
+  .main__feature__image img {
+    width: 90px;
+  }
+  .main__feature__cost {
+    font-size: 14px;
+  }
+  .main__feature__detail {
+    width: 100%;
+    font-size: 12px;
+  }
+  /* change others's components */
+  .others h1 {
+    font-size: 22px;
+  }
+  .others ul {
+    margin-top: 0px;
+  }
+  .others ul li {
+    margin-bottom: 20px;
   }
 }

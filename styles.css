@@ -398,8 +398,8 @@ footer li {
   font-size: 16px;
 }
 
-/* responsive tablet */
-@media only screen and (max-width: 1024px) {
+/* responsive general layout */
+@media only screen and (max-width: 1199.98px) {
   /*change info layout */
   .info {
     flex-direction: column;
@@ -409,6 +409,7 @@ footer li {
   }
   .info__content {
     padding: 0;
+    width: 100%;
   }
   /* change nav bar */
   .navigation ul .navigation__all {
@@ -443,8 +444,8 @@ footer li {
     margin: 0;
   }
 }
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 1199.98px) {
   /* general layout */
   header,
   .info,
@@ -483,7 +484,7 @@ footer li {
   .others ul li {
     padding-top: 20px;
   }
-
+  /* change footer's components */
   .footer__container {
     padding: 0;
     padding-top: 20px;
@@ -491,7 +492,7 @@ footer li {
 }
 
 /* responsive mobile devices - landscape */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767.98px) {
   /* general reset */
   body {
     font-family: "Poppins", sans-serif;
@@ -505,41 +506,6 @@ footer li {
     font-size: 16px;
     font-weight: bold;
   }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  /* general reset */
-  /* body {
-    font-family: "Poppins", sans-serif;
-  }
-  h1 {
-    padding: 10px 0px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  h2 {
-    font-size: 16px;
-    font-weight: bold;
-  } */
-  /* change nav bar */
-  /* .navigation ul .navigation__all {
-    font-weight: bold;
-    display: inline;
-  }
-  .navigation ul .navigation__choice {
-    display: none;
-  }
-
-  .navigation__dropbox {
-    display: inline;
-  }
-  .navigation__search {
-    display: none;
-  }
-  .navigation__direction {
-    display: none;
-  } */
-
   /* reset layout */
   header,
   .info,
@@ -570,24 +536,91 @@ footer li {
   .others ul li {
     margin: 10px 0px;
   }
-
+  
   .others {
     margin-top: 30px;
   }
 
+  /* reset header */
+  .header__line:after {
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+  }
+   .header__searchbox {
+    clear: both;
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+  } 
+ 
+  .header__dropdown__choice {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  /* change info's components */
+  .info__btn__message {
+    width: 100%;
+    max-width: 480px;
+    margin: 20px auto;
+  }
+  .info__content h1,
+  .info__name__text {
+    font-size: 22px;
+  }
+  /* change main__content's components */
+  .main__content ul li:nth-child(odd) {
+    margin-right: 20px;
+  }
+  .main__content h2 {
+    font-size: 14px;
+  }
+  .main__feature__image img {
+    width: 90px;
+  }
+  .main__feature__cost {
+    font-size: 14px;
+  }
+  .main__feature__detail {
+    width: 100%;
+    font-size: 12px;
+  }
+  /* reset review using flex */ 
+  .main__review ul {
+    flex-direction: column;
+  }
+  .main__review ul li
+  {
+    padding: 0;
+    width: 100%;
+  }
+  /* change others's components */
+  .others h1 {
+    font-size: 22px;
+  }
+  .others ul {
+    margin-top: 0px;
+  }
+  .others ul li {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
   /* reset components using flex */
   .main__content ul,
   .main__feature__title,
-  .main__review ul,
   .others ul,
   .footer__container {
     flex-direction: column;
   }
 
-  /* reset components's width to fit the width's device */
-  .info__content,
+  /* reset components's width to fit the device */
   .main__content ul li,
-  .main__review ul li,
   .others ul li,
   .footer__container__info {
     padding: 0;
@@ -606,12 +639,6 @@ footer li {
     height: 0;
     line-height: 0;
     visibility: hidden;
-  }
-  .header__searchbox {
-    clear: both;
-    display: flex;
-    margin: 20px 0;
-    width: 100%;
   }
   .header__input__search {
     display: none;
@@ -633,35 +660,5 @@ footer li {
   }
   .header__btn__search {
     display: none;
-  }
-  /* change info's components */
-  .info__btn__message {
-    width: 100%;
-    margin: 20px auto;
-  }
-  .info__content h1,
-  .info__name__text {
-    font-size: 22px;
-  }
-  /* change main__content's components */
-  .main__feature__image img {
-    width: 90px;
-  }
-  .main__feature__cost {
-    font-size: 14px;
-  }
-  .main__feature__detail {
-    width: 100%;
-    font-size: 12px;
-  }
-  /* change others's components */
-  .others h1 {
-    font-size: 22px;
-  }
-  .others ul {
-    margin-top: 0px;
-  }
-  .others ul li {
-    margin-bottom: 20px;
   }
 }

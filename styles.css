@@ -25,7 +25,7 @@ h1,
 h2,
 h3 {
   color: #4a4a4a;
-  font-weight: 600;
+  font-weight: 700;
 }
 h1 {
   font-style: normal;
@@ -33,6 +33,7 @@ h1 {
 }
 h2 {
   font-size: 18px;
+  padding-right: 5px;
 }
 h3 {
   font-size: 16px;
@@ -76,7 +77,7 @@ h3 {
   color: white;
 }
 input:focus {
-  border: white;
+  outline: none;
 }
 /* header layout */
 header {
@@ -175,8 +176,9 @@ header {
   padding: 8px 0px;
 }
 .info__name__text {
-  font-weight: bold;
+  font-weight: 600;
   padding-left: 10px;
+  font-size: 20px;
 }
 .info__name img {
   border-radius: 50%;
@@ -205,7 +207,7 @@ header {
 }
 .navigation ul li {
   display: inline;
-  padding: 0px 18px;
+  padding: 0px 22px;
 }
 .navigation ul li a {
   text-decoration: none;
@@ -259,7 +261,7 @@ main h1 {
 }
 
 .main__feature__content {
-  padding-left: 10px;
+  padding-left: 5px;
 }
 .main__feature__title {
   display: flex;
@@ -318,7 +320,7 @@ main h1 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 40px 0px;
+  padding-top: 20px;
   padding-bottom: 80px;
 }
 .others ul li {
@@ -365,6 +367,7 @@ footer h3 {
   padding: 10px 0px;
   color: white;
   font-size: 18px;
+  font-weight: 600;
 }
 
 footer li {
@@ -394,7 +397,7 @@ footer li {
   margin: 0px 100px;
   padding: 10px 0px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 16px;
 }
 
@@ -436,7 +439,13 @@ footer li {
     width: 45%;
   }
 
+  .others ul {
+    padding-top: 0;
+  }
   /* change footer's layout */
+  .footer__container {
+    padding: 10px 0px;
+  }
   .footer__container__info {
     margin: 10px 0px;
   }
@@ -501,10 +510,15 @@ footer li {
     padding: 10px 0px;
     font-size: 18px;
     font-weight: bold;
+    color: black;
   }
   h2 {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
+    color: black;
+  }
+  h3 {
+    color: black;
   }
   /* reset layout */
   header,
@@ -536,7 +550,7 @@ footer li {
   .others ul li {
     margin: 10px 0px;
   }
-  
+
   .others {
     margin-top: 30px;
   }
@@ -550,18 +564,18 @@ footer li {
     line-height: 0;
     visibility: hidden;
   }
-   .header__searchbox {
+  .header__searchbox {
     clear: both;
     display: flex;
     margin: 20px 0;
     width: 100%;
-  } 
- 
+  }
+
   .header__dropdown__choice {
     margin-left: 0;
     width: 100%;
   }
-  
+
   /* change info's components */
   .info__btn__message {
     width: 100%;
@@ -574,7 +588,7 @@ footer li {
   }
   /* change main__content's components */
   .main__content ul li:nth-child(odd) {
-    margin-right: 20px;
+    margin-right: 15px;
   }
   .main__content h2 {
     font-size: 14px;
@@ -589,12 +603,11 @@ footer li {
     width: 100%;
     font-size: 12px;
   }
-  /* reset review using flex */ 
+  /* reset review using flex */
   .main__review ul {
     flex-direction: column;
   }
-  .main__review ul li
-  {
+  .main__review ul li {
     padding: 0;
     width: 100%;
   }
@@ -626,7 +639,9 @@ footer li {
     padding: 0;
     width: 100%;
   }
-
+  .main__content h2 {
+    font-size: 16px;
+  }
   /* reset header */
   .fa-search {
     font-size: 20px;

@@ -4,16 +4,22 @@
   padding: 0;
 }
 body {
-  margin: 10px auto;
+  margin: 20px auto;
   margin-bottom: 0px;
   width: 100%;
-  max-width: 1400px;
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
   color: #666666;
 }
-
+header,
+.info,
+nav,
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 100px;
+}
 ul {
   list-style: none;
 }
@@ -81,7 +87,7 @@ input:focus {
 }
 /* header layout */
 header {
-  margin: 20px 100px;
+  margin: 20px auto;
   /* display: flex;
   justify-content: space-between;
   align-items: center;
@@ -139,7 +145,7 @@ header {
 /* info layout */
 .info {
   display: flex;
-  margin: 50px 100px;
+  margin: 50px auto;
   font-size: 17px;
 }
 .info__content {
@@ -231,7 +237,7 @@ header {
 }
 /* main layout */
 main {
-  margin: 20px 100px;
+  margin: 20px auto;
   margin-bottom: 100px;
 }
 main h1 {
@@ -300,7 +306,7 @@ main h1 {
 .review__content__info {
   display: flex;
   align-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 .review__content__info img {
   padding-right: 10px;
@@ -357,8 +363,9 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 0px 100px;
-  padding: 40px 0px;
+  max-width: 1440px;
+  padding: 40px 100px;
+  margin: 0 auto;
 }
 .footer__container__info {
   width: 25%;
@@ -392,10 +399,11 @@ footer li {
   width: 97%;
 }
 .footer__line {
+  max-width: 1440px;
+  margin: 0px auto;
   border: none;
   border-top: 1px solid lightgrey;
-  margin: 0px 100px;
-  padding: 10px 0px;
+  padding: 20px 90px;
   text-align: center;
   font-weight: 600;
   font-size: 16px;
@@ -460,7 +468,7 @@ footer li {
   .info,
   main,
   .footer__container {
-    margin: 30px;
+    padding: 0px 30px;
   }
   .btn {
     padding-left: 20px;
@@ -495,7 +503,6 @@ footer li {
   }
   /* change footer's components */
   .footer__container {
-    padding: 0;
     padding-top: 20px;
   }
 }
@@ -525,7 +532,7 @@ footer li {
   .info,
   main,
   .footer__container {
-    margin: 0px 15px;
+    padding: 0 15px;
   }
 
   .navigation {
@@ -600,7 +607,6 @@ footer li {
     font-size: 14px;
   }
   .main__feature__detail {
-    width: 100%;
     font-size: 12px;
   }
   /* reset review using flex */
@@ -608,7 +614,7 @@ footer li {
     flex-direction: column;
   }
   .main__review ul li {
-    padding: 0;
+    padding: 5px 0px;
     width: 100%;
   }
   /* change others's components */

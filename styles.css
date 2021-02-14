@@ -14,7 +14,7 @@ body {
 }
 header,
 .info,
-nav,
+.navigation,
 main {
   max-width: 1440px;
   margin: 0 auto;
@@ -410,6 +410,11 @@ footer li {
 }
 
 /* responsive general layout */
+@media only screen and (min-width: 1640px) {
+  .navigation {
+    margin: 40px auto;
+  }
+}
 @media only screen and (max-width: 1199.98px) {
   /*change info layout */
   .info {
